@@ -1,6 +1,6 @@
-# LeMoN – Lens Modelling with Neural networks
+# LEMON – Lens MOdelling with Neural networks
 
-LeMoN (a.k.a. LEMON) is a **Bayesian neural network** that estimates the parameters of galaxy-scale strong gravitational lenses (by default the three parameters of a Singular Isothermal Ellipsoid: the **Einstein radius** and the **two ellipticity components**) directly from images, together with a reliable uncertainty for each prediction. It takes a fraction of a second per lens, which makes it suitable for the hundreds of thousands of lenses expected from Euclid and Rubin/LSST.
+LEMON is a **Bayesian neural network** that estimates the parameters of galaxy-scale strong gravitational lenses (by default the three parameters of a Singular Isothermal Ellipsoid: the **Einstein radius** and the **two ellipticity components**) directly from images, together with a reliable uncertainty for each prediction. It takes a fraction of a second per lens, which makes it suitable for the hundreds of thousands of lenses expected from Euclid and Rubin/LSST.
 
 This repository contains the training and inference code. It is meant to be downloaded and used as is (no installation needed), either through the provided Jupyter notebook or by importing the modules in your own scripts.
 
