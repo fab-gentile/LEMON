@@ -55,8 +55,8 @@ L = 0.5 · exp(−log σ²) · (y − μ)² + 0.5 · log σ²
 ## Repository structure
 
 ```
-LeMoN/
-├── lemon_bnn/                  # the library (import from the repository root)
+LEMON/
+├── LEMON_bnn/                  # the library (import from the repository root)
 │   ├── config.py               # Config dataclass: every setting in one place
 │   ├── data.py                 # loading, pre-processing, batch generator, splitting
 │   ├── models.py               # ResNet-18/34/50 Bayesian architectures
@@ -67,7 +67,7 @@ LeMoN/
 ├── examples/
 │   ├── make_example_data.py    # creates a tiny dummy dataset (noise, no lenses)
 │   └── smoke_test.py           # end-to-end check that the code runs
-├── LeMoN_train_and_predict.ipynb   # train + predict notebook (Colab and local)
+├── LEMON_train_and_predict.ipynb   # train + predict notebook (Colab and local)
 ├── requirements.txt
 └── README.md
 ```
@@ -79,15 +79,15 @@ LeMoN/
 Download or clone the repository; nothing needs to be installed beyond the dependencies.
 
 ```bash
-git clone https://github.com/fab-gentile/LeMoN.git
-cd LeMoN
+git clone https://github.com/fab-gentile/LEMON.git
+cd LEMON
 python -m venv .venv && source .venv/bin/activate    # optional but recommended
 pip install -r requirements.txt
 ```
 
 Requirements: a recent Python 3 (tested with **Python 3.12**) and **TensorFlow ≥ 2.16 with Keras 3** (tested with TensorFlow 2.21 / Keras 3.15), `astropy`, `numpy`, `pandas`. A GPU is strongly recommended for training but not required.
 
-**Google Colab:** nothing to install locally. Open `LeMoN_train_and_predict.ipynb` in Colab; the first cell clones the repository and installs the missing packages. Choose a GPU runtime (*Runtime → Change runtime type*) for training.
+**Google Colab:** nothing to install locally. Open `LEMON_train_and_predict.ipynb` in Colab; the first cell clones the repository and installs the missing packages. Choose a GPU runtime (*Runtime → Change runtime type*) for training.
 
 ---
 
@@ -131,7 +131,7 @@ Provide plain NumPy files:
 
 ## Running the notebook
 
-Open `LeMoN_train_and_predict.ipynb` (Jupyter locally, or Colab) and:
+Open `LEMON_train_and_predict.ipynb` (Jupyter locally, or Colab) and:
 
 1. Run the setup cell (it detects Colab/local automatically).
 2. In the **configuration** cell, set `USE_EXAMPLE_DATA = False` and fill in `IMAGES_NPY`, `LABELS_NPY` (and optionally `IDS_NPY`, `DATA_ROOT`). Adjust the settings in `lb.Config(...)` if needed.
@@ -160,7 +160,7 @@ Run from the repository root (or add it to `sys.path`):
 
 ```python
 import numpy as np
-import lemon_bnn as lb
+import LEMON_bnn as lb
 
 cfg = lb.Config(param_names=("Ein_rad", "e1", "e2"), architecture="resnet34", data_root="my_data/")
 
@@ -205,7 +205,7 @@ For the default parameters this gives the columns `Ein_rad_pred`, `Ein_rad_std_t
 
 ## Configuration reference
 
-All settings live in `lemon_bnn.Config` (`lemon_bnn/config.py`); the defaults are those used for the published networks.
+All settings live in `LEMON_bnn.Config` (`LEMON_bnn/config.py`); the defaults are those used for the published networks.
 
 | setting | default | meaning |
 |---|---|---|
@@ -244,11 +244,11 @@ All settings live in `lemon_bnn.Config` (`lemon_bnn/config.py`); the defaults ar
 If you use this code, please cite both papers:
 
 ```bibtex
-@article{Gentile2023LeMoN,
+@article{Gentile2023LEMON,
   author  = {Gentile, Fabrizio and Tortora, Crescenzo and Covone, Giovanni and
              Koopmans, L{\'e}on V. E. and Li, Rui and Leuzzi, Laura and
              Napolitano, Nicola R.},
-  title   = {{LeMoN: Lens Modelling with Neural networks -- I. Automated modelling
+  title   = {{LEMON: Lens Modelling with Neural networks -- I. Automated modelling
               of strong gravitational lenses with Bayesian Neural Networks}},
   journal = {Monthly Notices of the Royal Astronomical Society},
   year    = {2023},
