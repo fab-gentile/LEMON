@@ -2,6 +2,10 @@
 
 LEMON is a **Bayesian neural network** that estimates the parameters of galaxy-scale strong gravitational lenses (by default the three parameters of a Singular Isothermal Ellipsoid: the **Einstein radius** and the **two ellipticity components**) directly from images, together with a reliable uncertainty for each prediction. It takes a fraction of a second per lens, which makes it suitable for the hundreds of thousands of lenses expected from Euclid and Rubin/LSST.
 
+The code has been successfully employed so far in:
+- Gentile et al. 2023, MNRAS, 522, 5442, [arXiv:2210.10793](https://arxiv.org/abs/2210.10793)
+- Euclid Collaboration: Busillo et al. 2026, A&A 711, A31, [arXiv:2503.15329](https://arxiv.org/abs/2503.15329)
+
 This repository contains the training and inference code. It is meant to be downloaded and used as is (no installation needed), either through the provided Jupyter notebook or by importing the modules in your own scripts.
 
 > **Pretrained weights are not distributed with this repository.** They are available from the authors upon reasonable request (see [Contact](#contact)). You can also train your own network on your own data with the notebook.
@@ -267,7 +271,7 @@ If you use this code, please cite both papers:
 }
 ```
 
-- Gentile et al. 2023, MNRAS, [arXiv:2210.10793](https://arxiv.org/abs/2210.10793)
+- Gentile et al. 2023, MNRAS, 522, 5442, [arXiv:2210.10793](https://arxiv.org/abs/2210.10793)
 - Euclid Collaboration: Busillo et al. 2026, A&A 711, A31, [arXiv:2503.15329](https://arxiv.org/abs/2503.15329)
 
 ---
